@@ -1,0 +1,68 @@
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.css
+ */
+
+ @media (min-width: 1023px) {
+	 
+.box-middle-header .bottom-middle-header .logo {
+    padding: 0 0 20px !important;
+    margin-top:-40px;
+}
+
+#index .box-start{
+	padding-top:0 !important;
+	}
+
+ }
+ 
+ .leo-megamenu .navbar-nav > li > a{
+ 	font-weight:normal !important;
+ }
+ 
+ 
+ 
+ .footer-container {
+    background: #e5e5e5 !important;
+}
+
+#wrapper .ApColumn .title_block {
+    font-size: 24px;
+    text-transform: uppercase;
+   /* font-weight: bold;*/
+}
+
+#wrapper .ApColumn .button-top-large .title_block , #wrapper .ApColumn .button-top .title_block{
+    margin-bottom: 0px !important;
+}
+
+#wrapper .ApColumn .sub-title-widget{
+	text-align:center;
+	margin-bottom:30px;
+	font-size:18px;
+}
+
+
+.cms-id-10 .page-content img{
+	max-width:100%;
+	height:auto;
+}
+
+.cms-id-10 .page-content .row{
+	padding-bottom:15px;
+}
+
+
+.topnav {
+    color: #fff !important;
+    background: #4395C5 !important;
+}
+
+.nav-links-header ul li a {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.nav-links-header ul li.nav-text3::before {
+	background:none !important;
+}

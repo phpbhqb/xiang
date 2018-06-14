@@ -1,0 +1,43 @@
+<nav data-megamenu-id="1499440717" class="leo-megamenu cavas_menu navbar navbar-default disable-canvas " role="navigation">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggler hidden-lg-up" data-toggle="collapse" data-target=".megamenu-off-canvas-1499440717">
+                <span class="sr-only">navigazione Toggle</span>
+            ☰
+                </button>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="leo-top-menu collapse navbar-toggleable-md megamenu-off-canvas megamenu-off-canvas-1499440717" id="menu_main">
+                <ul class="nav navbar-nav megamenu horizontal">
+                  <li class="nav-item parent"><a href="[!--news.url--]" target="_self" class="nav-link has-category"><span class="menu-title">Home</span></a></li>
+                  <li class="nav-item parent"><a href="[!--news.url--]html/introduction.html" target="_self" class="nav-link has-category"><span class="menu-title">introduction</span></a></li>
+				  [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid=0 and showclass=0 order by myorder,classid",0,24,0}]
+                  <li class="nav-item parent dropdown"><a class="nav-link dropdown-toggle has-category" href="<?=sys_ReturnBqClassname($bqr,9)?>" target="_self"><span class="menu-title"><?=$bqr['classname']?></span></a><b class="caret"></b>
+                  <div class="dropdown-menu level1">
+                    <div class="dropdown-menu-inner">
+                      <div class="row">
+                        <div class="col-sm-12 mega-col" data-colwidth="12" data-type="menu">
+                          <div class="inner">
+                            <ul>
+							<?php $classSql="select classid,classname from {$dbtbpre}enewsclass where bclassid={$bqr['classid']} and showclass=0 order by myorder,classid";
+							$classQuery=$empire->query($classSql);
+							while($classRes=$empire->fetch($classQuery)){
+							
+							?>
+                              <li class="nav-item "><a class="nav-link" href="<?=sys_ReturnBqClassname($classRes,9)?>" target="_self"><span class="menu-title"><?=$classRes['classname']?></span></a></li>
+							  
+							  <?php } ?>
+                            
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+				  [/e:loop]
+                  
+                  <li class="nav-item parent"><a href="[!--news.url--]html/contact.html" target="_self" class="nav-link has-category"><span class="menu-title">contact</span></a></li>
+                </ul>
+              </div>
+              </nav>
